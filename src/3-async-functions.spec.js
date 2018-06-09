@@ -79,5 +79,5 @@ describe("Assignment 3 - async", function() {
         done(err)
       }
     })
-  })
+  }).timeout(8000); // Set up longer because for some reason my tests are slow. I read mocha docs
 })

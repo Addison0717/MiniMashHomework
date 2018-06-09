@@ -16,15 +16,15 @@ function giveItBackLater(value, callback) {
 function addSomePromises(somePromise){
   return new Promise(function(resolve,reject){
 
-    // const outputPromise = addSomePromises(somePromise)
+      somePromise.then(function(value){
+        resolve(value.repeat(2))
+      }, function(value){
+        resolve(value.repeat(3))
+      })
 
-    if (true) {
-      resolve(somePromise)
-    } else {
-      reject(somePromise)
-    }
   })
 }
+
 
 
 
