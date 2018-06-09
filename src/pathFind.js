@@ -11,36 +11,50 @@ function pathFind(path, object) {
     return acc + current
   }, '')
   return object[reducer]
-  // console.log(reducer)
-  // console.log(object)
-  // console.log(object[reducer])
+
 }
 
 // pathFind(['foo'], obj)
 
 
 
-// USING BELOW THIS LINE TO TEST 
 
 
 
-const testString = ['foo', 'bar']
+// USING BELOW THIS LINE TO TEST
 
 
+const oneString = ['foo1']
+const multipleString = ['foo1', 'foo2', 'bar']
 
-if ( testString.length <= 1 ) {
-  const reducer = testString.reduce(function(acc, current){
-    return acc + current
-  }, '')
-} else {
-  const reducer = testString.map(item => item)
+const objTest = {
+    foo1: {
+        foo2: {
+            bar: "Some value"
+        }
+    }
 }
 
-// const reducer = testString.reduce(function(acc, current){
-//   return acc + current
-// }, '')
+console.log()
 
-console.log(reducer)
+
+function imATester(array, object){
+
+    if ( array.length <= 1 ) {
+      const reducer = array.reduce(function(acc, current){
+        return acc + current
+      }, '')
+      console.log(reducer)
+      // return object[reducer] //THIS WILL WORK FOR ONE STRING
+    } else {
+      const reducer = array.map(item => item)
+      console.log(reducer)
+    }
+
+}
+
+// imATester(oneString, objTest)
+// imATester(multipleString, objTest)
 
 
 
