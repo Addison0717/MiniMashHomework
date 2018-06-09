@@ -14,10 +14,27 @@ function myPathFind(path, object) {
 
 // Will work for either multiple or single string arrays!! :)
 const pathFind = (path, obj) => {
-    return path.reduce((object, key) =>
-        (object && object[key] !== 'undefined') ? object[key] : undefined, obj);
+    return path.reduce((acc, key) =>
+        (acc && acc[key] !== 'undefined') ? acc[key] : undefined, obj);
 }
 
+// const oneString = ['foo']
+// const multipleString = ['foo1', 'foo2', 'bar']
+//
+// const objOne = {
+//   foo: "Hey"
+// }
+//
+// const objMultiple = {
+//     foo1: {
+//         foo2: {
+//             bar: "Some value"
+//         }
+//     }
+// }
+//
+// console.log(pathFind(oneString, objOne))
+// console.log(pathFind(multipleString, objMultiple))
 
 
 // USING BELOW THIS LINE TO TEST
